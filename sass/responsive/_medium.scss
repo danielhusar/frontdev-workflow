@@ -1,0 +1,15 @@
+//medium grid
+#{enumerate('.col-m', 1, $cols - 1, '')} {
+	float: left;
+	margin-left: $gutter;
+}
+
+@for $i from 1 through $cols {
+	.col-m#{$i} {
+		@include cols($i);
+	}
+}
+
+//import all modules
+@import "modules/header/medium";
+@import "modules/footer/medium";

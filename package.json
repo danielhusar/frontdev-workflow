@@ -1,0 +1,39 @@
+{
+	"name": "frontdev-workflow",
+	"subdomain": "efrafa-boilerplate",
+	"description": "My front development workflow",
+	"keywords": [
+		"frontend",
+		"development"
+	],
+	"version": "0.1.0",
+	"author": "Daniel Husar <dano.husar@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/danielhusar/frontdev-workflow.git"
+	},
+	"dependencies": {
+		"underscore": "*",
+		"underscore.string": "*"
+	},
+	"devDependencies": {
+		"grunt": "~0.4.0",
+		"grunt-contrib-jshint": "*",
+		"grunt-contrib-uglify": "*",
+		"grunt-contrib-concat": "*",
+		"grunt-contrib-watch": "*",
+		"grunt-contrib-cssmin": "*",
+		"grunt-contrib-connect": "*",
+		"grunt-compass-multiple": "*",
+		"grunt-jsbeautifier": "*",
+		"grunt-swig": "*",
+		"grunt-plato": "*",
+		"grunt-mocha": "~0.3.0",
+		"grunt-localscreenshots": "*",
+		"grunt-string-replace": "*",
+		"grunt-open": "*",
+		"load-grunt-tasks": "*",
+		"mocha": "*",
+		"chai": "*"
+	}
+}

@@ -1,0 +1,8 @@
+body{
+	min-width: 600px;
+	padding: 0 $margin;
+}
+
+//import all modules
+@import "modules/header/small";
+@import "modules/footer/small";
