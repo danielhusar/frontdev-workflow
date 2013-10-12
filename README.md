@@ -25,15 +25,14 @@ Running grunt default task will:
 	grunt
 
 - concate and unglify your javascript
-- compile sass using compass with settings from config.rb (This task requires you to have Ruby, Sass, and Compass >=0.12.2 installed. )
-- create minified versions of you css files (so dont worry about changing the config.rb)
+- compile less files
 - compile all templates into static html files
 
 After running this task you can start your webserver in public directory and your app will be ready to use.
 
 ### Predefined tasks:
 
-This task will start a local webserver inside of public directory and open chrome with it and than ti will watch for sass and template changes 
+This task will start a local webserver inside of public directory and open chrome with it and than ti will watch for less and template changes 
 
 (**use this during the development**)
 
@@ -50,10 +49,10 @@ Switching between production and development environment
 
 ***
 
-Compile all sass files with compass:
+Compile all less files with compass:
 (you can also still directly call compass if you prefer)
 ```javascript
-grunt c
+grunt l
 ```
 ***
 Compile all templates:
@@ -102,22 +101,11 @@ Compile all swig templates
 
 ***
 
-If you prefer to use compass for generating css you can still run
-
-	compass watch
-	
-from the root directory and it will work. (same config is used for grunt and compass: config.rb)
-
-(By default there is set to generate also source maps inside of config.rb for live debugging which takes little longer to compile files, so if you are not using source maps you can comment it.)
-
-After that if you want to run grunt watch task just for template changes run this:
-
-	grunt w:tpl
-	
-***
-
 Coding standards
 ================
+### Html
+-	swig as a template engine (http://paularmstrong.github.io/swig/)
+
 ### Css
 
 - Every module need to have small, medium and large scss file (even if its empty)
@@ -135,7 +123,7 @@ Coding standards
 - Every module need to be in module directory
 - Lint and beautify you code before submitting! (grunt)
 - Use the current module structure of file (use yeoman to create new module)
-- One tab indentation
+- 2 spaces indentation
 - Only global objects are APP and TSB so please don't create any other
 - Always use "on" for binding events (dont use click..)
 - Every bind events must have namespace: tsb ( elem.on('click.tsb', function(){}) )
