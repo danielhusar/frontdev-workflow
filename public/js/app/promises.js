@@ -1,13 +1,13 @@
-(function(window, document, $, Modernizr, undefined) {
+(function(window, document, APP, $, Modernizr, undefined) {
   'use strict';
 
-  TSB.promises = {
+  APP.promises = {
 
     /**
      * Device changed promise, will be executed when the device has changed
      * @return {void}
      * @sample usage:
-     * TSB.promises.deviceChanged.done(function(){});
+     * APP.promises.deviceChanged.done(function(){});
      */
     deviceChanged: (function() {
       var treshold = 500,
@@ -17,8 +17,8 @@
       $(window).on('resize.tsb', function() {
         window.clearTimeout(debounce);
         debounce = window.setTimeout(function() {
-          if (TSB.settings.environment.device !== TSB.events.getDevice()) {
-            TSB.settings.environment.device = TSB.events.getDevice();
+          if (APP.settings.environment.device !== APP.events.getDevice()) {
+            APP.settings.environment.device = APP.events.getDevice();
             devicePromise.resolve();
           }
         }, treshold);
@@ -29,4 +29,4 @@
 
   };
 
-})(this, this.document, this.jQuery, this.Modernizr);
+})(this, this.document, this.APP, this.jQuery, this.Modernizr);

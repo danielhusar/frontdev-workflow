@@ -1,7 +1,7 @@
-(function(window, document, $, Modernizr, undefined) {
+(function(window, document, APP, $, Modernizr, undefined) {
   'use strict';
 
-  TSB.events = {
+  APP.events = {
 
     /**
      * Get the current device which is viewing the page
@@ -9,13 +9,13 @@
      */
     getDevice: function() {
       var device = '';
-      TSB.isDevice('small', function() {
+      APP.isDevice('small', function() {
         device = 'small';
       });
-      TSB.isDevice('medium', function() {
+      APP.isDevice('medium', function() {
         device = 'medium';
       });
-      TSB.isDevice('large', function() {
+      APP.isDevice('large', function() {
         device = 'large';
       });
       return device;
@@ -26,9 +26,9 @@
      * @return {void}
      */
     lazyLoad: function() {
-      $("img[data-src]").lazyLoad(200, function() {
+      $('img[data-src]').lazyLoad(200, function() {
         $(this).css('opacity', 1);
-        TSB.log('%c ' + $(this).attr('alt') + ' image lazy loaded', TSB.settings.console.css);
+        APP.log('%c ' + $(this).attr('alt') + ' image lazy loaded', APP.settings.console.css);
       });
     },
 
@@ -38,11 +38,11 @@
      * @return {void}
      */
     versions: function() {
-      TSB.log('%c jQuery version used: ' + $.fn.jquery, TSB.settings.console.css);
-      TSB.log('%c Modernizr version used: ' + Modernizr._version, TSB.settings.console.css);
-      TSB.log('%c ----------------------------', TSB.settings.console.css);
+      APP.log('%c jQuery version used: ' + $.fn.jquery, APP.settings.console.css);
+      APP.log('%c Modernizr version used: ' + Modernizr._version, APP.settings.console.css);
+      APP.log('%c ----------------------------', APP.settings.console.css);
     }
 
   };
 
-})(this, this.document, this.jQuery, this.Modernizr);
+})(this, this.document, this.APP, this.jQuery, this.Modernizr);

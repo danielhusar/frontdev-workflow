@@ -1,44 +1,44 @@
-(function(window, document, $, undefined) {
+(function(window, document, APP, $, undefined) {
   'use strict';
 
   //all init triggers
-  TSB.init = function() {
+  APP.init = function() {
 
     //log the versions of libraries
-    TSB.events.versions();
+    APP.events.versions();
 
     //store device
-    TSB.settings.environment.device = TSB.events.getDevice();
+    APP.settings.environment.device = APP.events.getDevice();
 
     //mobile inits
-    TSB.isDevice('small', function() {
-      TSB.log('%c small version', TSB.settings.console.css);
+    APP.isDevice('small', function() {
+      APP.log('%c small version', APP.settings.console.css);
     });
 
     //tablet inits
-    TSB.isDevice('medium', function() {
-      TSB.log('%c medium version', TSB.settings.console.css);
+    APP.isDevice('medium', function() {
+      APP.log('%c medium version', APP.settings.console.css);
     });
 
     //desktop inits
-    TSB.isDevice('large', function() {
-      TSB.log('%c large version', TSB.settings.console.css);
+    APP.isDevice('large', function() {
+      APP.log('%c large version', APP.settings.console.css);
     });
 
 
     //global inits
-    TSB.events.lazyLoad();
+    APP.events.lazyLoad();
 
     //page custom inits
 
     //Homepage
-    TSB.page('home', function() {
-      //TSB.instances.myModule = new TSB.modules.myModule();
+    APP.page('home', function() {
+      //APP.instances.myModule = new APP.modules.myModule();
     });
 
   };
 
   //initial init
-  TSB.init();
+  APP.init();
 
-})(this, this.document, this.jQuery);
+})(this, this.document, this.APP, this.jQuery);

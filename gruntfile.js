@@ -34,6 +34,14 @@ module.exports = function(grunt) {
       files: ['<%= concat.app.src %>', 'gruntfile.js', 'package.json', '!public/js/libraries/polyfills.js']
     },
 
+    //ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. 
+    eslint: {
+      options: {
+        config: 'eslint.json'
+      },
+      target: ['<%= concat.app.src %>', '!public/js/libraries/polyfills.js']
+    },
+
     //Less compiler
     less: {
       development: {
@@ -70,7 +78,8 @@ module.exports = function(grunt) {
       all: {
         src: 'test/index.html',
         options: {
-          run: true
+          run: true,
+          reporter: 'Spec'
         }
       }
     },
@@ -123,7 +132,7 @@ module.exports = function(grunt) {
           path: 'public',
           port: 3000
         },
-        viewport: ['600x800', '768x1024', '1024x1024']
+        viewport: ['320x480', '768x1024', '1025x1025']
       },
       src: ['public/*.html']
     },
@@ -187,15 +196,16 @@ module.exports = function(grunt) {
 
   //Tasks  
   grunt.registerTask('default', ['concat', 'uglify', 'swig', 'less']);
-  grunt.registerTask('h', ['jshint']);
-  grunt.registerTask('u', ['concat', 'uglify']);
-  grunt.registerTask('t', ['mocha']);
-  grunt.registerTask('p', ['plato']);
-  grunt.registerTask('b', ['jsbeautifier']);
-  grunt.registerTask('a', ['localscreenshots']);
-  grunt.registerTask('s', ['swig']);
 
-  grunt.registerTask('l', ['less']);
+  grunt.registerTask('packjs', ['concat', 'uglify']);
+  grunt.registerTask('reports', ['plato']);
+  grunt.registerTask('beauty', ['jsbeautifier']);
+  grunt.registerTask('screens', ['localscreenshots']);
+  grunt.registerTask('tpl', ['swig']);
+
+  grunt.registerTask('css', ['less']);
+  grunt.registerTask('test', ['mocha']);
+  grunt.registerTask('hint', ['jshint', 'eslint']);
   grunt.registerTask('server', ['connect', 'open', 'watch']);
   grunt.registerTask('prod', ['string-replace:prod', 'default']);
   grunt.registerTask('dev', ['string-replace:dev', 'default']);

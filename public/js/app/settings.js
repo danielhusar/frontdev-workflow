@@ -1,7 +1,7 @@
-(function(window, document, $, undefined) {
+(function(window, document, APP, $, undefined) {
   'use strict';
 
-  TSB.settings = {
+  APP.settings = {
     environment: {
       isProduction: false,
       device: 'small' //device, can be: desktop, tablet, mobile. The version is set up on init, but mobile is default.
@@ -11,4 +11,4 @@
     }
   };
 
-})(this, this.document, this.jQuery);
+})(this, this.document, this.APP, this.jQuery);

@@ -24,6 +24,7 @@
     "grunt-contrib-watch": "*",
     "grunt-contrib-connect": "*",
     "grunt-contrib-less": "*",
+    "grunt-eslint": "*",
     "grunt-jsbeautifier": "*",
     "grunt-plato": "*",
     "grunt-mocha": "~0.3.0",

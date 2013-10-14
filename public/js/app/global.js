@@ -1,28 +1,28 @@
 (function(window, document, $, Modernizr, undefined) {
   'use strict';
 
-  var APP = function() {
+  var Application = function() {
     this.modules = {};
     this.instances = {};
     this.promises = {};
     this.events = {};
   };
-  window.TSB = new APP();
+  var APP = window.APP = new Application();
 
   /**
-   * Defining named conditions to be used by APP.isDevice
+   * Defining named conditions to be used by Application.isDevice
    *
    * @namespace APP
    */
-  APP.prototype.device = {
+  Application.prototype.device = {
     'large': function() {
       return !Modernizr.mq('only all') || Modernizr.mq('only screen and (min-width: 1025px)');
     },
     'medium': function() {
-      return (!APP.prototype.device.large()) && Modernizr.mq('only screen and (min-width: 768px)');
+      return (!Application.prototype.device.large()) && Modernizr.mq('only screen and (min-width: 768px)');
     },
     'small': function() {
-      return !(APP.prototype.device.medium() || APP.prototype.device.large());
+      return !(Application.prototype.device.medium() || Application.prototype.device.large());
     }
   };
 
@@ -41,8 +41,8 @@
    * @param     {Function}  callback    Callback to be triggered when conditions return true
    * @return    {Object}                this
    */
-  APP.prototype.isDevice = function(condition, callback) {
-    if (APP.prototype.device[condition]()) {
+  Application.prototype.isDevice = function(condition, callback) {
+    if (Application.prototype.device[condition]()) {
       callback();
     }
     return this;
@@ -60,12 +60,12 @@
    * @param     {Function}  callback    Callback to be triggered when conditions return true
    * @return    {Object}                this
    */
-  APP.prototype.page = function(page, callback) {
+  Application.prototype.page = function(page, callback) {
 
     var pageId = $('body').attr('id').replace('page-', '');
 
     if ((typeof page === 'string' && pageId === page) || (typeof page === 'object' && page.indexOf(pageId) !== -1)) {
-      APP.prototype.log('%c Executing scripts for: ' + pageId, TSB.settings.console.css);
+      Application.prototype.log('%c Executing scripts for: ' + pageId, APP.settings.console.css);
       callback();
     }
     return this;
@@ -76,11 +76,10 @@
    * Console log function, it logs only on development enviroment
    * @return {void}
    */
-  APP.prototype.log = function() {
+  Application.prototype.log = function() {
     var args;
-    var currentDateAndTime;
 
-    if (window.TSB.settings && window.TSB.settings.environment && !window.TSB.settings.environment.isProduction) {
+    if (window.APP.settings && window.APP.settings.environment && !window.APP.settings.environment.isProduction) {
       if (window.console && window.console.log && window.console.log.apply) {
         args = Array.prototype.slice.call(arguments);
         window.console.log.apply(window.console, args);
@@ -93,7 +92,7 @@
    * @param  {string} method css method
    * @return {string} prefixed method if exist, or the same method of preixed not avaiable
    */
-  APP.prototype.prefix = function(method) {
+  Application.prototype.prefix = function(method) {
     var transEndEventNames = {
       'WebkitTransition': 'webkitTransitionEnd',
       'MozTransition': 'transitionend',
@@ -126,8 +125,8 @@
    *
    * Sample Usage:
    *
-   *   APP.fmt('Hello %@ %@',    'John', 'Doe') // => 'Hello John Doe'
-   *   APP.fmt('Hello %@2, %@1', 'John', 'Doe') // => 'Hello Doe, John'
+   *   Application.fmt('Hello %@ %@',    'John', 'Doe') // => 'Hello John Doe'
+   *   Application.fmt('Hello %@2, %@1', 'John', 'Doe') // => 'Hello Doe, John'
    *
    *
    * @namespace APP
@@ -136,7 +135,7 @@
    * @param  {String...}  *args   Strings to be passed into @string param
    * @return {String}             Formatted string
    */
-  APP.prototype.fmt = function(string) {
+  Application.prototype.fmt = function(string) {
     var formats;
     var index;
 
@@ -160,9 +159,9 @@
    * @return {Object}          Module DOM
    *
    * @sample usage:
-   * TSB.moduleWrap('account');
+   * APP.moduleWrap('account');
    */
-  APP.prototype.moduleWrap = function(module) {
+  Application.prototype.moduleWrap = function(module) {
     return $('[data-module="' + module + '"]');
   };
 
@@ -176,10 +175,10 @@
    * @return {Object}          this
    *
    * @sample usage:
-   * TSB.addModule('account', settings, events);
+   * APP.addModule('account', settings, events);
    */
-  APP.prototype.addModule = function(module, settings, events) {
-    TSB.modules[module] = $.extend({}, {
+  Application.prototype.addModule = function(module, settings, events) {
+    APP.modules[module] = $.extend({}, {
       settins: settings
     }, events);
     return this;
