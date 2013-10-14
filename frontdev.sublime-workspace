@@ -1,0 +1,602 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tr",
+				"tr	Tag"
+			],
+			[
+				"req",
+				"required"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"prevent",
+				"preventDefault"
+			],
+			[
+				"th",
+				"thead	Tag"
+			],
+			[
+				"sass",
+				"sass-compile"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "frontdev.sublime-project",
+			"settings":
+			{
+				"buffer_size": 358,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 71.0,
+		"selected_items":
+		[
+			[
+				"markdown ex",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"markdow",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"mark",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"PACKA",
+				"Package Control: List Packages"
+			],
+			[
+				"pA",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pcka",
+				"Package Control: List Packages"
+			],
+			[
+				"paca",
+				"Package Control: List Packages"
+			],
+			[
+				"pacak",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/danielhusar/_dev/_git/portfolio/portfolio.sublime-project",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/frontdev.sublime-project",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/.gitignore",
+		"/Users/danielhusar/_dev/_git/TSB/tsb.sublime-project",
+		"/Users/danielhusar/_dev/_git/TSB/tsb.sublime-workspace",
+		"/Users/danielhusar/_dev/_git/portfolio/gruntfile.js",
+		"/Users/danielhusar/_dev/_git/portfolio/package.json",
+		"/Users/danielhusar/_dev/_git/portfolio/public/js/app/init.js",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/public/js/plugins/jQuery.lazyLoad.js",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/public/js/app/events.js",
+		"/Users/danielhusar/_dev/_git/portfolio/public/js/app/events.js",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/public/js/app/init.js",
+		"/Users/danielhusar/_dev/_git/portfolio/public/js/app/promises.js",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/public/js/app/promises.js",
+		"/Users/danielhusar/_dev/_git/portfolio/less/style.less",
+		"/Users/danielhusar/_dev/_git/portfolio/public/js/app/global.js",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/style.less",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/public/js/app/global.js",
+		"/Users/danielhusar/_dev/_git/portfolio/templates/base/_layout.tpl",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/templates/base/_layout.tpl",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/templates/index.tpl",
+		"/Users/danielhusar/_dev/_git/portfolio/templates/base/_variables.tpl",
+		"/Users/danielhusar/_dev/_git/portfolio/templates/index.tpl",
+		"/Users/danielhusar/_dev/_git/portfolio/less/responsive/_small.less",
+		"/Users/danielhusar/_dev/_git/portfolio/less/base/_mixins.less",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/base/_mixins.less",
+		"/Users/danielhusar/_dev/_git/portfolio/less/responsive/_large.less",
+		"/Users/danielhusar/_dev/_git/portfolio/less/responsive/_medium.less",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/responsive/_medium.less",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/responsive/_large.less",
+		"/Users/danielhusar/_dev/_git/TSB/public/js/plugins/jQuery.hiddenRadio.js",
+		"/Users/danielhusar/_dev/_git/TSB/public/js/modules/account.js",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/README.md",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/eslint.json",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/templates/base/_variables.tpl",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/modules/header/_small.less",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/modules/header/_medium.less",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/modules/header/_large.less",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/modules/footer/_large.less",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/templates/modules/header/_header.tpl",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/templates/modules/footer/_footer.tpl",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/gruntfile.js",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/package.json",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/test/index.html",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/test/index.html",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/generator-module/app/templates/module.scss",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/generator-module/app/templates/module.js",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/config.rb",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/test/tests/globals.js",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/public/js/app/settings.js",
+		"/Users/danielhusar/_dev/_git/TSB/package.json",
+		"/Users/danielhusar/_dev/_git/TSB/gruntfile.js",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/gruntfile.js",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/base/_variables.less",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/base/components/_layout.less",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/base/_normalize.less",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/base/_boilerplate.less",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/base/components/_animations.less",
+		"/Users/danielhusar/_dev/_git/TSB/sass/base/components/_layout.scss",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/base/_components.less",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/responsive/_small.less",
+		"/Users/danielhusar/_dev/_git/TSB/sass/responsive/_medium.scss",
+		"/Users/danielhusar/_dev/_git/TSB/sass/base/components/_grid.scss",
+		"/Users/danielhusar/_dev/_git/TSB/sass/base/_variables.scss",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/javascript/plugins/exo/exoBundle.js",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/javascript/framework.min.js",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/javascript/scripts.header_footer_only.js",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/javascript/homepage/framework.min.js",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/javascript/simplicity_1/framework.min.js",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/public/css/IE.css",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/base/components/buttons.less",
+		"/Users/danielhusar/_dev/_git/TSB/sass/base/components/_buttons.scss",
+		"/Users/danielhusar/_dev/_git/frondev-workflow/less/base/components/animations.less",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/header.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/fragments/kontakt.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/functions/cleanup.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/js/custom.js",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/index.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/single.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/page.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/footer.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/plugins/custom.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/functions.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/functions/scripts.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/functions/custom-posts.php",
+		"/Users/danielhusar/_dev/_php/wordpress/.htaccess",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/css/media-queries.css",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/css/main.css",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/js/jquery.validate.min.js",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/fragments/wordpress.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Agratech/page.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Agratech/single.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/fragments/nase-menu.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Agratech/category.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Agratech/functions.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/plugins/onecatonly.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Agratech/header.php",
+		"/Users/danielhusar/Dropbox/Public/palko/index.html",
+		"/Users/danielhusar/Dropbox/Public/palko/kontakt.html",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/plugins/contact-form-plugin/bws_menu/bws_menu.php",
+		"/Users/danielhusar/Dropbox/Public/palko/menu.html",
+		"/Users/danielhusar/Dropbox/Public/palko/static.html",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Agratech/index.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-config.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-settings.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Agratech/functions/custom-posts.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/fragments/uvod.php",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/index.html",
+		"/Users/danielhusar/_dev/_php/wordpress/wp-content/themes/Palko/fragments/menu.php",
+		"/Users/danielhusar/_dev/_git/TSB/generator-module/app/templates/module.scss",
+		"/Users/danielhusar/_dev/_git/TSB/generator-module/app/templates/module.js",
+		"/Users/danielhusar/_dev/_git/TSB/generator-module/app/templates/module.tpl",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/package.json",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/test/tests/globals.js",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/test/tests/asd.js",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/node_modules/sinon/lib/sinon/spy.js",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/node_modules/sinon/lib/sinon.js",
+		"/Users/danielhusar/_dev/_git/TSB/test/tests/globals.js",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/node_modules/grunt-localscreenshots/tasks/localscreenshots.js",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/tests/tests/globals.js",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/templates_dynamic/upgrade.html",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/templates_cms_sprints/homepage.html",
+		"/Users/danielhusar/_dev/_svn/vf/mobilisation_frameworks/tests/index.html",
+		"/Users/danielhusar/_dev/_git/TSB/test/index.html",
+		"/Users/danielhusar/_dev/_git/TSB/public/add-payee.html",
+		"/Users/danielhusar/_dev/_git/TSB/public/js/plugins/jQuery.validateExtend.js",
+		"/Users/danielhusar/_dev/_git/TSB/public/js/plugins/jQuery.validate.js",
+		"/Users/danielhusar/_dev/_git/TSB/public/js/plugins/jQuery.lazyLoad.js"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"TSB.",
+			"APP.",
+			"cookieNotification",
+			"cookie",
+			"APP.",
+			"vf.device",
+			"ozh_sampleoptions",
+			"contact-form",
+			"<p>",
+			"input",
+			"inden",
+			"folder",
+			"prompt_add_folder",
+			"observeRadioPanel",
+			"hosts",
+			"console",
+			"console.log",
+			"bind",
+			"console.log('bind')",
+			"tabs-body",
+			"link-arrow-persistant",
+			"pre-",
+			"carouse",
+			"grey-box",
+			"holy",
+			"Red 12 Month",
+			"plan",
+			"spacin",
+			"spa",
+			"margin",
+			"margin-",
+			"carousel",
+			"caroseu",
+			".hp-panel",
+			"help-panel",
+			"no",
+			"<i",
+			"col",
+			"margin-",
+			"strong",
+			"Mobile Broadband",
+			"aima",
+			"hei",
+			";",
+			"}",
+			"{",
+			"vf.laz",
+			"detail",
+			"redirect_img imageUrlSmall",
+			"lazyload",
+			"planChooser",
+			"vf.lazyload.init",
+			" Gallery.fixBrokenImages",
+			"fixBrokenImages",
+			"lazyload",
+			"lazyl",
+			"vf.lazyload",
+			"function lazyload",
+			"lazyload",
+			"lazyLoad",
+			"lazy",
+			"fix",
+			"//",
+			"port",
+			"Please enter",
+			"please enter",
+			"please enter your",
+			"#commentform input[type=\"text\"]",
+			"#commentform input[type=\"text\"], .contact-form input[type=\"text\"] {\n",
+			"grunt-reload",
+			"ttf",
+			"env",
+			"deviceGallery",
+			"handsetcode",
+			".device-box",
+			".device-box ",
+			"plan-component",
+			"reviews.vodafone.ie",
+			"env",
+			"ui-submit",
+			"@media only screen",
+			".search-box .search-q ",
+			"searchTerms",
+			"hr",
+			"exsg_no_result",
+			"cookie",
+			"exoSuggestParams",
+			"formatRow",
+			"font",
+			".browser",
+			"$.browser",
+			"$.browser.msie",
+			"ttf",
+			"loading",
+			"load",
+			"#ccc",
+			"no-q",
+			"border",
+			"border-bottom",
+			";",
+			"}",
+			"{",
+			"$exoJ",
+			"jOld",
+			"@media",
+			"media qu",
+			"gallery",
+			"env",
+			"Gallery.env ",
+			"FORM INPUT",
+			"filter",
+			"li.current-active-link",
+			".local-nav ul li.current-active-link ul li a",
+			"initHelpers",
+			"placeholderPoly",
+			"poly",
+			".lt-ie9 #myv12",
+			".content-area",
+			"files",
+			"filesSrc",
+			"map",
+			"replace",
+			".mod-nav",
+			" #myv12-my-vodafone-2012 .button.secondary",
+			"#myv12-my-vodafone-2012 .button.secondary",
+			"button.secondary",
+			".local-nav",
+			".local-nav ul li.current-active-link a"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"APP.",
+			"Application.",
+			"Application",
+			"nastavenia",
+			"",
+			"$",
+			"TSB",
+			"APP",
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "frontdev.sublime-project",
+					"settings":
+					{
+						"buffer_size": 358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "alpha",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.find_results":
+	{
+		"height": 689.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 393.0,
+	"status_bar_visible": true
+}

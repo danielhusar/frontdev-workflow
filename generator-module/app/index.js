@@ -70,6 +70,7 @@ ModuleGenerator.prototype.check = function app() {
   var cssBasePath = 'sass/modules/' + this.slug;
   var tplBasePath = 'templates/modules/' + this.slug;
   var jsFile = 'public/js/modules/' + this.slug + '.js';
+  var testFile = 'test/tests/modules/' + this.slug + '.js';
 
   if (fs.existsSync(cssBasePath) && this.createSass) {
     console.log(cssBasePath + ' directory already exits. Please pick another name');
@@ -83,6 +84,11 @@ ModuleGenerator.prototype.check = function app() {
 
   if (fs.existsSync(jsFile) && this.createJs) {
     console.log(jsFile + ' file already exits. Please pick another name');
+    process.exit(1);
+  }
+
+  if (fs.existsSync(testFile) && this.createJs) {
+    console.log(testFile + ' file already exits. Please pick another name');
     process.exit(1);
   }
 }
@@ -117,6 +123,17 @@ ModuleGenerator.prototype.css = function app() {
 
 ModuleGenerator.prototype.js = function app() {
   if(this.createJs){
+    var basePath = 'test/tests/modules/';
+    var jsModule = this.readFileAsString(path.join(this.sourceRoot(), 'test.js'))
+                    .replace(/{yeoman-cap}/g, this.cap)
+                    .replace(/{yeoman-slug}/g, this.slug)
+                    .replace(/{yeoman-name}/g, this.moduleName);
+    this.write(basePath + this.slug + '.js', jsModule);
+  }
+};
+
+ModuleGenerator.prototype.test = function app() {
+  if(this.createJs){
     var basePath = 'public/js/modules/';
     var jsModule = this.readFileAsString(path.join(this.sourceRoot(), 'module.js'))
                     .replace(/{yeoman-cap}/g, this.cap)
@@ -127,12 +144,20 @@ ModuleGenerator.prototype.js = function app() {
 };
 
 ModuleGenerator.prototype.body = function app() {
-  if(this.createTpl){
+  if(this.createJs){
+
     var basePath = 'templates/base/_layout.tpl';
     var body = this.readFileAsString(basePath).replace('<!-- yeoman slug -->', '<script src="js/modules/' + this.slug + '.js"></script>\r\n    <!-- yeoman slug -->');
     fs.unlinkSync(basePath) //delete it first so yeoman will not print conflict file
     this.write(basePath, body);
+
+    var testPath = 'test/index.html';
+    var testBody = this.readFileAsString(testPath).replace('<!-- yeoman slug -->', '<script src="tests/modules/' + this.slug + '.js"></script>\r\n  <!-- yeoman slug -->');
+    fs.unlinkSync(testPath) //delete it first so yeoman will not print conflict file
+    this.write(testPath, testBody);
+
   }
+
 };
 
 function addStyle(file, slug, type, context){
