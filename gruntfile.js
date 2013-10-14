@@ -60,7 +60,7 @@ module.exports = function(grunt) {
         tasks: ['swig']
       },
       less: {
-        files: ['less/*.less'],
+        files: ['less/*.less', 'less/**/*.less', 'less/**/**/*.less', 'less/**/**/**/*.less'],
         tasks: ['less:development']
       }
     },
