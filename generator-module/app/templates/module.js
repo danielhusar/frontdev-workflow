@@ -1,4 +1,4 @@
-(function(window, document, $, undefined) {
+(function(window, document, APP, $, undefined) {
 	'use strict';
 
 	/**
@@ -8,7 +8,7 @@
 	var module = function(settings) {
 		//default settings
 		var defaults = {
-			$wrapper: TSB.moduleWrap('{yeoman-slug}')
+			$wrapper: APP.moduleWrap('{yeoman-slug}')
 		};
 
 		//properties
@@ -20,7 +20,7 @@
 		this.validate();
 
 		//log that our module is running
-		TSB.log('%c {yeoman-name} module init', TSB.settings.console.css);
+		APP.log('%c {yeoman-name} module init', APP.settings.console.css);
 	};
 
 	/**
@@ -40,6 +40,6 @@
 	};
 
 	//add our module
-	TSB.modules.{yeoman-cap} = module;
+	APP.modules.{yeoman-cap} = module;
 
-})(this, this.document, this.jQuery);
+})(this, this.document, this.APP, this.jQuery);
