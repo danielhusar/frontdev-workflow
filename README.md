@@ -49,7 +49,7 @@ Switching between production and development environment
 
 ***
 
-Compile all less files with compass:
+Compile all less files
 ```javascript
 grunt css
 ```
