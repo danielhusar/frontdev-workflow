@@ -50,54 +50,43 @@ Switching between production and development environment
 ***
 
 Compile all less files with compass:
-(you can also still directly call compass if you prefer)
 ```javascript
-grunt l
+grunt css
 ```
 ***
 Compile all templates:
 
-	grunt s
+	grunt tpl
 
 ***
-Lint your javascript
+Lint your javascript using jshint and eslint
 
-	grunt h
+	grunt hint
 
 ***
 Beautify your javascript (so if you are stuck with indentation js hint errors, you can run this task and it will fix it automatically)
 
-	grunt b
+	grunt beauty
 
 ***
 Concat and uglify javascript
 
-	grunt u
+	grunt packjs
 
 ***
 Run mocha tests tests
 
-	grunt t
-
-***	
-Beautify your javascript, **please run it before every commit**
-
-	grunt b
+	grunt tets
 
 ***	
 Create the screenshots of every page in 3 resolutuins within screenhshot directory, this will take a while, but you will have after the screenshots of whole app in all covered resolutions
 
-	grunt a
+	grunt screens
 
 ***
 Generate the javascript statistic by plato plugin
 
-	grunt p
-
-***
-Compile all swig templates
-
-	grunt s
+	grunt reports
 
 ***
 
