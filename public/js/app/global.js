@@ -19,7 +19,7 @@
       return !Modernizr.mq('only all') || Modernizr.mq('only screen and (min-width: 1025px)');
     },
     'medium': function() {
-      return (!Application.prototype.device.large()) && Modernizr.mq('only screen and (min-width: 768px)');
+      return (!Application.prototype.device.large()) && Modernizr.mq('only screen and (min-width: 569px)');
     },
     'small': function() {
       return !(Application.prototype.device.medium() || Application.prototype.device.large());

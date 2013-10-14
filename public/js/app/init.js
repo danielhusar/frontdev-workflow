@@ -5,7 +5,7 @@
   APP.init = function() {
 
     //log the versions of libraries
-    APP.events.versions();
+    APP.events.logs();
 
     //store device
     APP.settings.environment.device = APP.events.getDevice();
