@@ -73,7 +73,6 @@
 		<script src="js/app/promises.js"></script>
 		<script src="js/app/events.js"></script>
 
-
 		<!-- modules -->
     <!-- yeoman slug -->
 

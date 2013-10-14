@@ -76,7 +76,7 @@ Concat and uglify javascript
 ***
 Run mocha tests tests
 
-	grunt tets
+	grunt test
 
 ***	
 Create the screenshots of every page in 3 resolutuins within screenhshot directory, this will take a while, but you will have after the screenshots of whole app in all covered resolutions

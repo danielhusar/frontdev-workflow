@@ -34,6 +34,7 @@
     "grunt-open": "*",
     "load-grunt-tasks": "*",
     "mocha": "*",
-    "chai": "*"
+    "chai": "*",
+    "sinon": "*"
   }
 }
