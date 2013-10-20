@@ -49,10 +49,14 @@ Switching between production and development environment
 
 ***
 
+Create sprites. (https://github.com/LearnBoost/node-canvas/wiki/Installation---OSX)
+
+	grunt sprite
+
 Compile all less files
-```javascript
-grunt css
-```
+
+	grunt css
+
 ***
 Compile all templates:
 
