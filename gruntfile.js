@@ -187,6 +187,33 @@ module.exports = function(grunt) {
         path: 'http://localhost:<%= connect.server.options.port %>/',
         app: 'Google Chrome Canary'
       }
+    },
+
+    //Generate sprites
+    sprite: {
+      all: {
+        src: ['public/img/icons/*.png'],             // Sprite files to read in
+        destImg: 'public/img/sprite.png',            // Location to output spritesheet
+        destCSS: 'less/base/components/_icons.less', // Less with variables under sprite names
+        imgPath: 'img/sprite.png',                   // Manual override for imgPath specified in CSS
+        algorithm: 'binary-tree',                    // Specify algorithm (top-down, left-right, diagonal [\ format], alt-diagonal [/ format], binary-tree [best packing])
+        padding: 2,                                  // Specify padding between images
+        engine: 'canvas',                            // Specify engine (auto, phantomjs, canvas, gm)
+        cssFormat: 'css',                            // (stylus, scss, sass, less, json, jsonArray, css)
+        engineOpts: {
+          imagemagick: true                          // Specify settings for engine
+        },
+        imgOpts: {                                   // Specify img options
+           format: 'png',
+           quality: 90
+        },
+        cssOpts: {                                   // Specify css options
+          functions: false,
+          cssClass: function (item) {
+            return '.icon-' + item.name;
+          }
+        }
+      }
     }
 
   });
@@ -204,6 +231,7 @@ module.exports = function(grunt) {
   grunt.registerTask('tpl', ['swig']);
 
   grunt.registerTask('css', ['less']);
+  grunt.registerTask('sprite', ['sprite']);
   grunt.registerTask('test', ['mocha']);
   grunt.registerTask('hint', ['jshint', 'eslint']);
   grunt.registerTask('server', ['connect', 'open', 'watch']);
