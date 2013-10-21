@@ -197,7 +197,7 @@ module.exports = function(grunt) {
         destCSS: 'less/base/components/_icons.less', // Less with variables under sprite names
         imgPath: 'img/sprite.png',                   // Manual override for imgPath specified in CSS
         algorithm: 'binary-tree',                    // Specify algorithm (top-down, left-right, diagonal [\ format], alt-diagonal [/ format], binary-tree [best packing])
-        padding: 2,                                  // Specify padding between images
+        padding: 1,                                  // Specify padding between images
         engine: 'auto',                            // Specify engine (auto, phantomjs, canvas, gm)
         cssFormat: 'css',                            // (stylus, scss, sass, less, json, jsonArray, css)
         engineOpts: {
@@ -222,7 +222,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   //Tasks  
-  grunt.registerTask('default', ['concat', 'uglify', 'swig', 'less']);
+  grunt.registerTask('default', ['concat', 'uglify', 'swig', 'sprites','less']);
 
   grunt.registerTask('packjs', ['concat', 'uglify']);
   grunt.registerTask('reports', ['plato']);
