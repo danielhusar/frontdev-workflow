@@ -198,7 +198,7 @@ module.exports = function(grunt) {
         imgPath: 'img/sprite.png',                   // Manual override for imgPath specified in CSS
         algorithm: 'binary-tree',                    // Specify algorithm (top-down, left-right, diagonal [\ format], alt-diagonal [/ format], binary-tree [best packing])
         padding: 2,                                  // Specify padding between images
-        engine: 'canvas',                            // Specify engine (auto, phantomjs, canvas, gm)
+        engine: 'auto',                            // Specify engine (auto, phantomjs, canvas, gm)
         cssFormat: 'css',                            // (stylus, scss, sass, less, json, jsonArray, css)
         engineOpts: {
           imagemagick: true                          // Specify settings for engine
@@ -231,7 +231,7 @@ module.exports = function(grunt) {
   grunt.registerTask('tpl', ['swig']);
 
   grunt.registerTask('css', ['less']);
-  grunt.registerTask('sprite', ['sprite']);
+  grunt.registerTask('sprites', ['sprite']);
   grunt.registerTask('test', ['mocha']);
   grunt.registerTask('hint', ['jshint', 'eslint']);
   grunt.registerTask('server', ['connect', 'open', 'watch']);
