@@ -192,7 +192,9 @@ module.exports = function(grunt) {
     //Generate sprites
     sprite: {
       all: {
-        src: ['public/img/icons/*.png'],             // Sprite files to read in
+        src: ['public/img/icons/*.png', 
+              'public/img/icons/*.jpg', 
+              'public/img/icons/*.gif'],             // Sprite files to read in
         destImg: 'public/img/sprite.png',            // Location to output spritesheet
         destCSS: 'less/base/components/_icons.less', // Less with variables under sprite names
         imgPath: 'img/sprite.png',                   // Manual override for imgPath specified in CSS
