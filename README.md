@@ -1,5 +1,3 @@
-Autor: Daniel Husar
-
 Installation
 ============
 
