@@ -24,7 +24,8 @@ Running grunt default task will:
 
 	grunt
 
-- concate and unglify your javascript
+- concate and unglify your javascri
+- recreate sprites from all images
 - compile less files
 - compile all templates into static html files
 
@@ -53,7 +54,7 @@ Create sprites from all icons located inside icon folder.
 
 Readme: https://github.com/Ensighten/grunt-spritesmith
 
-You may need to install Cairo: https://github.com/LearnBoost/node-canvas/wiki/Installation---OSX
+You may need to install Cairo or Phantom.js: https://github.com/LearnBoost/node-canvas/wiki/Installation---OSX
 
 	grunt sprites
 
@@ -87,7 +88,8 @@ Run mocha tests tests
 	grunt test
 
 ***	
-Create the screenshots of every page in 3 resolutuins within screenhshot directory, this will take a while, but you will have after the screenshots of whole app in all covered resolutions
+Create the screenshots of every page in 3 resolutuins within screenhshot directory, this will take a while, but you will have after the screenshots of whole app in all covered resolutions.
+You will need to have phantom.js installed. (brew update && brew install phantomjs)
 
 	grunt screens
 
@@ -98,40 +100,6 @@ Generate the javascript statistic by plato plugin
 
 ***
 
-Coding standards
-================
-### Html
--	swig as a template engine (http://paularmstrong.github.io/swig/)
-
-### Css
-
-- Every module need to have small, medium and large scss file (even if its empty)
-- Every module must be in its namespace
-- Dashes in class names
-- Only allowed mediaqueries are in style.scss
-- Don't use css hacks to target IE browsers, use lt- classes instead
-- Don't use px in font sizes, use always em, and tried to avoid to use px at minimum (use percentage rather in elements)
-- Don't use prefixed css3 styles, use css3 compass, or create a mixin
-- Don't use IDS or !important
-- If you think your functionality can be reused, include it in components
-
-### Javascript
-
-- Every module need to be in module directory
-- Lint and beautify you code before submitting! (grunt)
-- Use the current module structure of file (use yeoman to create new module)
-- 2 spaces indentation
-- Only global objects are APP and TSB so please don't create any other
-- Always use "on" for binding events (dont use click..)
-- Every bind events must have namespace: tsb ( elem.on('click.tsb', function(){}) )
-- Dont use classes or ids for selectors, use data attributes instead
-- For calling global functions, always call it with window.function.. so not setInterval but window.setInterval
-- For most possible cases use css transitions instead of jQuery animations, or use jQuery animations just as fallback
-- Don't include respond.js, css3-mediaqueries.js or any js library that parses the css with ajax call
-- Don't modify object you don't own, so don't prototype to any javascript core objects
-- Single quotes
-- Install docblockr (https://tutsplus.com/lesson/docblockr/) or any other plugin to your favorite IDE and comment everything
-- Keep things simple :)
 
 Creating a new module
 =====================
