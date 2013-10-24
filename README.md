@@ -3,7 +3,7 @@ Installation
 
 Install node.js (http://nodejs.org/)
 
-Install grunt globally by running (http://gruntjs.com/)
+Install grunt cli (http://gruntjs.com/)
 
 	sudo npm install -g grunt-cli
 
