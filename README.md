@@ -22,7 +22,7 @@ Running grunt default task will:
 
 	grunt
 
-- concate and unglify your javascri
+- concate and unglify your javascript
 - recreate sprites from all images
 - compile less files
 - compile all templates into static html files
