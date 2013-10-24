@@ -48,3 +48,5 @@ public/*.html
 public/css/*.css
 public/css/*.map
 screenshots
+*.sublime-project
+*.sublime-workspace
