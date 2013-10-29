@@ -38,7 +38,7 @@ reports
 cache/*
 .sass-cache
 
-# TSB Project -> ignore all dynamic generated files #
+# ignore all dynamic generated files #
 #####################################################
 app.js
 app.min.js
