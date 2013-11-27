@@ -2,6 +2,6 @@
 
 {% block content %}
 
-  Hello World....
+  {% include "modules/portfolio/_portfolio.tpl" %}
 
 {% endblock %}

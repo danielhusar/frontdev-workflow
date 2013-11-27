@@ -197,7 +197,7 @@ module.exports = function(grunt) {
               'public/img/icons/*.gif'],             // Sprite files to read in
         destImg: 'public/img/sprite.png',            // Location to output spritesheet
         destCSS: 'less/base/components/_icons.less', // Less with variables under sprite names
-        imgPath: 'img/sprite.png',                   // Manual override for imgPath specified in CSS
+        imgPath: '../img/sprite.png',                   // Manual override for imgPath specified in CSS
         algorithm: 'binary-tree',                    // Specify algorithm (top-down, left-right, diagonal [\ format], alt-diagonal [/ format], binary-tree [best packing])
         padding: 1,                                  // Specify padding between images
         engine: 'phantomjs',                         // Specify engine (auto, phantomjs, canvas, gm)

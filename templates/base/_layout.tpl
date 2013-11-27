@@ -38,7 +38,7 @@
   <![endif]-->
   <div id="wrap">
     {% include "modules/header/_header.tpl" %}
-    <main role="main" class="clearfix">
+    <main role="main" class="main clearfix">
       {% block content %}{% endblock %}
     </main>
   </div>
@@ -74,6 +74,7 @@
     <script src="js/app/events.js"></script>
 
     <!-- modules -->
+    <script src="js/modules/portfolio.js"></script>
     <!-- yeoman slug -->
 
     <!-- main init -->
