@@ -34,7 +34,7 @@ module.exports = function(grunt) {
       files: ['<%= concat.app.src %>', 'gruntfile.js', 'package.json', '!public/js/libraries/polyfills.js']
     },
 
-    //ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. 
+    //ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
     eslint: {
       options: {
         config: 'eslint.json'
@@ -175,7 +175,7 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-          port: 9000,
+          port: 8000,
           base: 'public'
         }
       }
@@ -185,22 +185,22 @@ module.exports = function(grunt) {
     open: {
       dev: {
         path: 'http://localhost:<%= connect.server.options.port %>/',
-        app: 'Google Chrome Canary'
+        app: 'Google Chrome'
       }
     },
 
     //Generate sprites
     sprite: {
       all: {
-        src: ['public/img/icons/*.png', 
-              'public/img/icons/*.jpg', 
+        src: ['public/img/icons/*.png',
+              'public/img/icons/*.jpg',
               'public/img/icons/*.gif'],             // Sprite files to read in
         destImg: 'public/img/sprite.png',            // Location to output spritesheet
         destCSS: 'less/base/components/_icons.less', // Less with variables under sprite names
         imgPath: 'img/sprite.png',                   // Manual override for imgPath specified in CSS
         algorithm: 'binary-tree',                    // Specify algorithm (top-down, left-right, diagonal [\ format], alt-diagonal [/ format], binary-tree [best packing])
         padding: 1,                                  // Specify padding between images
-        engine: 'auto',                            // Specify engine (auto, phantomjs, canvas, gm)
+        engine: 'phantomjs',                         // Specify engine (auto, phantomjs, canvas, gm)
         cssFormat: 'css',                            // (stylus, scss, sass, less, json, jsonArray, css)
         engineOpts: {
           imagemagick: true                          // Specify settings for engine
@@ -216,6 +216,19 @@ module.exports = function(grunt) {
           }
         }
       }
+    },
+
+    //reduce size of all images
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,                  // Enable dynamic expansion
+          optimizationLevel: 5,
+          cwd: 'public/img',             // Src matches are relative to this path
+          src: ['*.{png,jpg,gif}'],      // Actual patterns to match
+          dest: 'public/img'             // Destination path prefix
+        }]
+      }
     }
 
   });
@@ -223,8 +236,8 @@ module.exports = function(grunt) {
   //Dependencies
   require('load-grunt-tasks')(grunt);
 
-  //Tasks  
-  grunt.registerTask('default', ['concat', 'uglify', 'swig', 'sprites','less']);
+  //Tasks
+  grunt.registerTask('default', ['concat', 'uglify', 'swig', 'sprites', 'image', 'less']);
 
   grunt.registerTask('packjs', ['concat', 'uglify']);
   grunt.registerTask('reports', ['plato']);
@@ -234,6 +247,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('css', ['less']);
   grunt.registerTask('sprites', ['sprite']);
+  grunt.registerTask('image', ['imagemin']);
   grunt.registerTask('test', ['mocha']);
   grunt.registerTask('hint', ['jshint', 'eslint']);
   grunt.registerTask('server', ['connect', 'open', 'watch']);

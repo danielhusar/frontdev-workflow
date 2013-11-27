@@ -22,7 +22,7 @@
 
   <link rel="canonical" href="#">
 
-  <title>{% block title %}Boostrap{% endblock %}</title>
+  <title>{% block title %}Bootstrap{% endblock %}</title>
 
   <link rel="stylesheet" href="css/style.{% if isProduction %}min.{% endif %}css">
 
@@ -56,7 +56,7 @@
     <script src="js/plugins.min.js"></script>
     <script src="js/app.min.js"></script>
   {% else %}
-    <!-- 
+    <!--
       All plugins, core and modules js files.
       On prod all this will be concated and minified into plugins.min.js and app.min.js
     -->

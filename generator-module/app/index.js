@@ -32,9 +32,9 @@ ModuleGenerator.prototype.askFor = function askFor() {
       message: 'What do you want to call your module?'
     },
     {
-      name: 'createSass',
+      name: 'createLess',
       type: 'confirm',
-      message: 'Do you want me to create sass files?',
+      message: 'Do you want me to create less files?',
       default: true
     },
     {
@@ -56,7 +56,7 @@ ModuleGenerator.prototype.askFor = function askFor() {
     this.slug = _.slugify(this.moduleName);
     this.cap = _.camelize(this.moduleName.toLowerCase());
 
-    this.createSass = props.createSass;
+    this.createLess = props.createLess;
     this.createJs = props.createJs;
     this.createTpl = props.createTpl;
 
@@ -67,7 +67,7 @@ ModuleGenerator.prototype.askFor = function askFor() {
 
 //dont overwrite existing modules
 ModuleGenerator.prototype.check = function app() {
-  var cssBasePath = 'sass/modules/' + this.slug;
+  var cssBasePath = 'less/modules/' + this.slug;
   var tplBasePath = 'templates/modules/' + this.slug;
   var jsFile = 'public/js/modules/' + this.slug + '.js';
   var testFile = 'test/tests/modules/' + this.slug + '.js';
@@ -105,19 +105,19 @@ ModuleGenerator.prototype.tpl = function app() {
 };
 
 ModuleGenerator.prototype.css = function app() {
-  if(this.createSass){
-    var basePath = 'sass/modules/' + this.slug;
-    var cssModule = this.readFileAsString(path.join(this.sourceRoot(), 'module.scss'))
+  if(this.createLess){
+    var basePath = 'less/modules/' + this.slug;
+    var cssModule = this.readFileAsString(path.join(this.sourceRoot(), 'module.less'))
                       .replace(/{yeoman-slug}/g, this.slug);
     this.mkdir(basePath);
-    this.write(basePath + '/_small.scss', cssModule);
-    this.write(basePath + '/_medium.scss', cssModule);
-    this.write(basePath + '/_large.scss', cssModule);
+    this.write(basePath + '/_small.less', cssModule);
+    this.write(basePath + '/_medium.less', cssModule);
+    this.write(basePath + '/_large.less', cssModule);
 
     //link our files
-    addStyle('sass/responsive/_small.scss', this.slug, 'small', this);
-    addStyle('sass/responsive/_medium.scss', this.slug, 'medium', this);
-    addStyle('sass/responsive/_large.scss', this.slug, 'large', this);
+    addStyle('less/responsive/_small.less', this.slug, '_small', this);
+    addStyle('less/responsive/_medium.less', this.slug, '_medium', this);
+    addStyle('less/responsive/_large.less', this.slug, '_large', this);
   }
 };
 
