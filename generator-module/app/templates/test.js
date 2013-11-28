@@ -1,6 +1,6 @@
 (function(){
 
-  var {yeoman-cap} = new TSB.modules.{yeoman-cap}();
+  var {yeoman-cap} = new APP.modules.{yeoman-cap}();
 
   describe('{yeoman-name}', function() {
 
