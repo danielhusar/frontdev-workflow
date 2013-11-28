@@ -52,7 +52,8 @@ module.exports = function(grunt) {
       },
       production: {
         options: {
-          yuicompress: true
+          yuicompress: true,
+          dumpLineNumbers: 'comments'
         },
         files: {
           "public/css/style.min.css": "less/style.less",
