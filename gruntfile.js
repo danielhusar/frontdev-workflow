@@ -149,8 +149,7 @@ module.exports = function(grunt) {
           replacements: [{
             pattern: 'isProduction: false',
             replacement: 'isProduction: true'
-          },
-          {
+          }, {
             pattern: 'isProduction = false',
             replacement: 'isProduction = true'
           }]
@@ -194,25 +193,26 @@ module.exports = function(grunt) {
     sprite: {
       all: {
         src: ['public/img/icons/*.png',
-              'public/img/icons/*.jpg',
-              'public/img/icons/*.gif'],             // Sprite files to read in
-        destImg: 'public/img/sprite.png',            // Location to output spritesheet
+          'public/img/icons/*.jpg',
+          'public/img/icons/*.gif'
+        ], // Sprite files to read in
+        destImg: 'public/img/sprite.png', // Location to output spritesheet
         destCSS: 'less/base/components/_icons.less', // Less with variables under sprite names
-        imgPath: '../img/sprite.png',                   // Manual override for imgPath specified in CSS
-        algorithm: 'binary-tree',                    // Specify algorithm (top-down, left-right, diagonal [\ format], alt-diagonal [/ format], binary-tree [best packing])
-        padding: 1,                                  // Specify padding between images
-        engine: 'phantomjs',                         // Specify engine (auto, phantomjs, canvas, gm)
-        cssFormat: 'css',                            // (stylus, scss, sass, less, json, jsonArray, css)
+        imgPath: '../img/sprite.png', // Manual override for imgPath specified in CSS
+        algorithm: 'binary-tree', // Specify algorithm (top-down, left-right, diagonal [\ format], alt-diagonal [/ format], binary-tree [best packing])
+        padding: 1, // Specify padding between images
+        engine: 'phantomjs', // Specify engine (auto, phantomjs, canvas, gm)
+        cssFormat: 'css', // (stylus, scss, sass, less, json, jsonArray, css)
         engineOpts: {
-          imagemagick: true                          // Specify settings for engine
+          imagemagick: true // Specify settings for engine
         },
-        imgOpts: {                                   // Specify img options
-           format: 'png',
-           quality: 90
+        imgOpts: { // Specify img options
+          format: 'png',
+          quality: 90
         },
-        cssOpts: {                                   // Specify css options
+        cssOpts: { // Specify css options
           functions: false,
-          cssClass: function (item) {
+          cssClass: function(item) {
             return '.icon-' + item.name;
           }
         }
@@ -223,11 +223,11 @@ module.exports = function(grunt) {
     imagemin: {
       dynamic: {
         files: [{
-          expand: true,                  // Enable dynamic expansion
+          expand: true, // Enable dynamic expansion
           optimizationLevel: 5,
-          cwd: 'public/img',             // Src matches are relative to this path
-          src: ['*.{png,jpg,gif}'],      // Actual patterns to match
-          dest: 'public/img'             // Destination path prefix
+          cwd: 'public/img', // Src matches are relative to this path
+          src: ['*.{png,jpg,gif}'], // Actual patterns to match
+          dest: 'public/img' // Destination path prefix
         }]
       }
     }

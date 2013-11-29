@@ -49,13 +49,13 @@
       APP.log('%c ----------------------------', APP.settings.console.css);
 
       //promises
-      APP.promises.deviceChanged.small.done(function(){
+      APP.promises.deviceChanged.small.done(function() {
         APP.log('%c Executing promises for small device.', APP.settings.console.css);
       });
-       APP.promises.deviceChanged.medium.done(function(){
+      APP.promises.deviceChanged.medium.done(function() {
         APP.log('%c Executing promises for medium device.', APP.settings.console.css);
       });
-      APP.promises.deviceChanged.large.done(function(){
+      APP.promises.deviceChanged.large.done(function() {
         APP.log('%c Executing promises for large device.', APP.settings.console.css);
       });
     }
