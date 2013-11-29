@@ -34,7 +34,7 @@
 
 
     test: function(a, b, c, d){
-      var temp = "wrong quotes";
+      var a;
       return !!1;
     },
 
