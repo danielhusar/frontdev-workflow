@@ -32,13 +32,6 @@
       });
     },
 
-
-    test: function(a, b, c, d){
-      var a;
-      return !!1;
-    },
-
-
     /**
      * Log the versions of the used plugins
      * @return {void}
