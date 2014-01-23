@@ -1,4 +1,4 @@
-Installation
+Installation [![Build Status](https://travis-ci.org/danielhusar/frontdev-workflow.png?branch=master)](https://travis-ci.org/danielhusar/frontdev-workflow) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 ============
 
 Install node.js (http://nodejs.org/)
@@ -31,7 +31,7 @@ After running this task you can start your webserver in public directory and you
 
 ### Predefined tasks:
 
-This task will start a local webserver inside of public directory and open chrome with it and than ti will watch for less and template changes 
+This task will start a local webserver inside of public directory and open chrome with it and than ti will watch for less and template changes
 
 (**use this during the development**)
 
@@ -85,7 +85,7 @@ Run mocha tests tests
 
 	grunt test
 
-***	
+***
 Create the screenshots of every page in 3 resolutuins within screenhshot directory, this will take a while, but you will have after the screenshots of whole app in all covered resolutions.
 You will need to have phantom.js installed. (brew update && brew install phantomjs)
 
@@ -105,14 +105,14 @@ For easy module creation there is a yeoman module task that can do all the work 
 First you need to install yeoman globally.
 
 	sudo npm install -g yo
-	
+
 Than you need to link the generator by running:
 
 	sudo cd generator-module && npm link && cd ..
-	
+
 After that you will have linked module generator.
 Now you can run this command:
 
 	yo module
-	
+
 And it will ask you for module name and create and link all the proper files required for single module.
