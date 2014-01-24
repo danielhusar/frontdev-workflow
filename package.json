@@ -34,7 +34,7 @@
     "grunt-spritesmith": "~1.11.2",
     "grunt-contrib-imagemin": "*",
     "load-grunt-tasks": "*",
-    "mocha": "*",
+    "mocha": "1.13.0",
     "chai": "*",
     "sinon": "*"
   }
