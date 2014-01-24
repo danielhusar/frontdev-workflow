@@ -40,10 +40,6 @@ cache/*
 
 # ignore all dynamic generated files #
 #####################################################
-app.js
-app.min.js
-plugins.js
-plugins.min.js
 public/*.html
 public/css/*.css
 public/css/*.map
