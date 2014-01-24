@@ -77,7 +77,7 @@ module.exports = function(grunt) {
     //Tests
     mocha: {
       all: {
-        src: 'test/index.html',
+        src: './test/index.html',
         options: {
           run: true,
           reporter: 'Spec'
