@@ -10,7 +10,7 @@ Install grunt cli (http://gruntjs.com/)
 
 Install all dependencies:
 
-	sudo npm install
+	npm install
 
 
 ***
