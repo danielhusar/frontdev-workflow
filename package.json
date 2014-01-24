@@ -7,7 +7,7 @@
     "development"
   ],
   "scripts": {
-    "test": "grunt test --verbose"
+    "test": "grunt test"
   },
   "version": "0.1.0",
   "author": "Daniel Husar <dano.husar@gmail.com>",
