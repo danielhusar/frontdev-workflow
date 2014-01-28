@@ -3,7 +3,6 @@ Installation [![Build Status](https://travis-ci.org/danielhusar/frontdev-workflo
 
 [![browser support](https://ci.testling.com/danielhusar/frontdev-workflow.png)](https://ci.testling.com/danielhusar/frontdev-workflow)
 
-
 Install node.js (http://nodejs.org/)
 
 Install grunt cli (http://gruntjs.com/)

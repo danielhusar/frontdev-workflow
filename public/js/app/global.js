@@ -7,6 +7,7 @@
     this.promises = {};
     this.events = {};
   };
+
   var APP = window.APP = new Application();
 
   /**
