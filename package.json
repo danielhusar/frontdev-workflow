@@ -37,5 +37,15 @@
     "mocha": "1.13.0",
     "chai": "*",
     "sinon": "*"
+  },
+  "testling": {
+    "files": "public/js/app/*.js",
+    "browsers": {
+      "ie": [ 8, 9 ],
+      "firefox": [ 13 ],
+      "chrome": [ 20 ],
+      "safari": [ 5.1 ],
+      "opera": [ 12 ]
+    }
   }
 }
