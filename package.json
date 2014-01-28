@@ -40,7 +40,8 @@
   },
   "testling": {
     "scripts": [
-      "public/js/app/global.js"
+      "public/js/app/global.js",
+      "public/js/app/settings.js"
     ],
     "browsers": [
       "ie/6..latest",
