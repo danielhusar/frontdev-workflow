@@ -37,21 +37,5 @@
     "mocha": "1.13.0",
     "chai": "*",
     "sinon": "*"
-  },
-  "testling": {
-    "scripts": [
-      "public/js/app/global.js",
-      "public/js/app/settings.js"
-    ],
-    "browsers": [
-      "ie/8..latest",
-      "firefox/22..latest",
-      "chrome/25..latest",
-      "opera/12..latest",
-      "safari/5.1..latest",
-      "ipad/6.0..latest",
-      "iphone/6.0..latest",
-      "android-browser/4.2..latest"
-    ]
   }
 }
