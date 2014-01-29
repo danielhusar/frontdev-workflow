@@ -1,8 +1,6 @@
 Installation [![Build Status](https://travis-ci.org/danielhusar/frontdev-workflow.png?branch=master)](https://travis-ci.org/danielhusar/frontdev-workflow) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 ============
 
-[![browser support](https://ci.testling.com/danielhusar/frontdev-workflow.png)](https://ci.testling.com/danielhusar/frontdev-workflow)
-
 Install node.js (http://nodejs.org/)
 
 Install grunt cli (http://gruntjs.com/)
