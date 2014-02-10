@@ -1,21 +1,33 @@
-body{
-  width: 1024px;
-  margin: 0 auto;
-}
-
-//large grid
+//medium grid
 .make-grid-columns-float(l);
 .make-grid(@grid-columns, l, width);
 
 .gutter-l-right > *{
-	margin-right: @padding;
+  margin-right: @padding;
 }
 .gutter-l-left > *{
-	margin-left: @padding;
+  margin-left: @padding;
 }
 .gutter-l-top > *{
-	margin-top: @padding;
+  margin-top: @padding;
 }
 .gutter-l-bottom > *{
-	margin-bottom: @padding;
+  margin-bottom: @padding;
+}
+.gutter-l-right-half > *{
+  margin-right: @padding/2;
+}
+.gutter-l-left-half > *{
+  margin-left: @padding/2;
+}
+.gutter-l-top-half > *{
+  margin-top: @padding/2;
+}
+.gutter-l-bottom-half > *{
+  margin-bottom: @padding/2;
+}
+.center{
+	width: @largeBreakpoint - @padding;
+  margin: 0 auto;
+  padding: 0;
 }

@@ -9,7 +9,15 @@ module.exports = function(grunt) {
         separator: '\r\n;'
       },
       app: {
-        src: ['public/js/libraries/polyfills.js', 'public/js/app/global.js', 'public/js/app/settings.js', 'public/js/app/promises.js', 'public/js/app/events.js', 'public/js/app/validation.js', 'public/js/modules/*.js', 'public/js/app/init.js'],
+        src: [
+          'public/js/libraries/polyfills.js',
+          'public/js/app/global.js',
+          'public/js/app/settings.js',
+          'public/js/app/promises.js',
+          'public/js/app/events.js',
+          'public/js/modules/*.js',
+          'public/js/app/init.js'
+        ],
         dest: 'public/js/app.js'
       },
       plugins: {
@@ -34,20 +42,12 @@ module.exports = function(grunt) {
       files: ['<%= concat.app.src %>', 'gruntfile.js', 'package.json', '!public/js/libraries/polyfills.js']
     },
 
-    //ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
-    eslint: {
-      options: {
-        config: 'eslint.json'
-      },
-      target: ['<%= concat.app.src %>', '!public/js/libraries/polyfills.js']
-    },
-
     //Less compiler
     less: {
       development: {
         files: {
-          "public/css/style.css": "less/style.less",
-          "public/css/IE.css": "less/IE.less"
+          'public/css/style.css': 'less/style.less',
+          'public/css/IE.css': 'less/IE.less'
         }
       },
       production: {
@@ -56,8 +56,8 @@ module.exports = function(grunt) {
           dumpLineNumbers: 'comments'
         },
         files: {
-          "public/css/style.min.css": "less/style.less",
-          "public/css/IE.min.css": "less/IE.less"
+          'public/css/style.min.css': 'less/style.less',
+          'public/css/IE.min.css': 'less/IE.less'
         }
       }
     },
@@ -191,28 +191,28 @@ module.exports = function(grunt) {
 
     //Generate sprites
     sprite: {
-      all: {
+      icons: {
         src: ['public/img/icons/*.png',
-          'public/img/icons/*.jpg',
-          'public/img/icons/*.gif'
-        ], // Sprite files to read in
-        destImg: 'public/img/sprite.png', // Location to output spritesheet
-        destCSS: 'less/base/components/_icons.less', // Less with variables under sprite names
-        imgPath: '../img/sprite.png', // Manual override for imgPath specified in CSS
-        algorithm: 'binary-tree', // Specify algorithm (top-down, left-right, diagonal [\ format], alt-diagonal [/ format], binary-tree [best packing])
-        padding: 1, // Specify padding between images
-        engine: 'phantomjs', // Specify engine (auto, phantomjs, canvas, gm)
-        cssFormat: 'css', // (stylus, scss, sass, less, json, jsonArray, css)
+              'public/img/icons/*.jpg',
+              'public/img/icons/*.gif'],             // Sprite files to read in
+        destImg: 'public/img/icons.png',             // Location to output spritesheet
+        destCSS: 'less/base/_icons.less',            // Less with variables under sprite names
+        imgPath: '../img/icons.png',                 // Manual override for imgPath specified in CSS
+        algorithm: 'binary-tree',                    // Specify algorithm (top-down, left-right, diagonal [\ format], alt-diagonal [/ format], binary-tree [best packing])
+        padding: 1,                                  // Specify padding between images
+        engine: 'phantomjs',                         // Specify engine (auto, phantomjs, canvas, gm)
+        cssFormat: 'css',                            // (stylus, scss, sass, less, json, jsonArray, css)
+        cssTemplate: 'css.mustache',
         engineOpts: {
-          imagemagick: true // Specify settings for engine
+          imagemagick: true                          // Specify settings for engine
         },
-        imgOpts: { // Specify img options
-          format: 'png',
-          quality: 90
+        imgOpts: {                                   // Specify img options
+           format: 'png',
+           quality: 90
         },
-        cssOpts: { // Specify css options
+        cssOpts: {                                   // Specify css options
           functions: false,
-          cssClass: function(item) {
+          cssClass: function (item) {
             return '.icon-' + item.name;
           }
         }
@@ -229,6 +229,20 @@ module.exports = function(grunt) {
           src: ['*.{png,jpg,gif}'], // Actual patterns to match
           dest: 'public/img' // Destination path prefix
         }]
+      }
+    },
+
+    //validate html
+    validation: {
+      options: {
+        reset: true,
+        stoponerror: false,
+        reportpath: 'validate-output.json',
+        prettifyrc: '.prettifyrc',
+        maxTry: 5
+      },
+      files: {
+        src: ['public/*.html']
       }
     }
 
@@ -250,7 +264,8 @@ module.exports = function(grunt) {
   grunt.registerTask('sprites', ['sprite']);
   grunt.registerTask('image', ['imagemin']);
   grunt.registerTask('test', ['mocha']);
-  grunt.registerTask('hint', ['jshint', 'eslint']);
+  grunt.registerTask('validate', ['validation']);
+  grunt.registerTask('hint', ['jshint']);
   grunt.registerTask('server', ['connect', 'open', 'watch']);
   grunt.registerTask('prod', ['string-replace:prod', 'default']);
   grunt.registerTask('dev', ['string-replace:dev', 'default']);

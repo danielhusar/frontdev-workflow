@@ -3,13 +3,18 @@
 
 @import "base/_normalize";
 @import "base/_boilerplate";
-@import "base/_components";
+@import "base/_animations";
+@import "base/_icon";
+@import "base/_icons";
 
 
 @import "responsive/_small";
-@media only screen and (min-width: 569px) {
+@media only screen and (min-width: @mediumBreakpoint) {
   @import "responsive/_medium";
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: @largeBreakpoint) {
   @import "responsive/_large";
+}
+@media print{
+	@import "base/_print";
 }

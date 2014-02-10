@@ -1,0 +1,21 @@
+//.make-grid-columns();
+.make-grid-columns(s);
+.make-grid-columns(m);
+.make-grid-columns(l);
+
+//grid content
+.make-grid-columns-float(s);
+.make-grid(@grid-columns, s, width);
+
+.gutter-right > *{
+	margin-right: @padding;
+}
+.gutter-left > *{
+	margin-left: @padding;
+}
+.gutter-top > *{
+	margin-top: @padding;
+}
+.gutter-bottom > *{
+	margin-bottom: @padding;
+}

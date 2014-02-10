@@ -13,16 +13,42 @@
   {% include "base/_variables.tpl" %}
 
   <link rel="canonical" href="#">
-
   <title>{% block title %}Bootstrap{% endblock %}</title>
+  <link rel="stylesheet" href="css/style.{% if isProduction %}min.{% endif %}css">
 
+  <!--
+    facebook sharing meta tags
+    fill the url
+  -->
+  <meta property="og:title" content="">
+  <meta property="og:description" content="" >
+  <meta property="og:image" content="img/favicons/logo.png">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+
+  <!--
+    twitter card
+    Twitter requires that your domain must be approved before they will allow Twitter Cards for your site;
+    go to: https://dev.twitter.com/cards
+    fill the url
+  -->
+  <meta name="twitter:card" content="">
+  <meta name="twitter:url" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="img/favicons/logo.png">
+
+  <!-- fill the canonical url -->
+  <link rel="canonical" href="#">
+
+  <!-- assets -->
   <link rel="stylesheet" href="css/style.{% if isProduction %}min.{% endif %}css">
 
   <!--[if (lt IE 9)&(!IEMobile)]>
-    <link rel="stylesheet" href="/css/IE.{% if isProduction %}min.{% endif %}css">
+    <link rel="stylesheet" href="css/IE.{% if isProduction %}min.{% endif %}css">
   <![endif]-->
 
-  <script src="js/libraries/modernizr-2.7.0.min.js"></script>
+  <script src="js/libraries/modernizr-2.7.1.min.js"></script>
 </head>
 <body id="page-{{ pageId }}">
   <!--[if lt IE 8]>
@@ -31,28 +57,18 @@
   <div id="wrap">
     {% include "modules/header/_header.tpl" %}
     <main role="main" class="main clearfix">
-      {% block content %}{% endblock %}
+      <div class="center">
+        {% block content %}{% endblock %}
+      </div>
     </main>
   </div>
   {% include "modules/footer/_footer.tpl" %}
 
-  <!--[if lt IE 9]>
-    <script src="js/libraries/jquery.1.9.0.min.js"></script>
-  <![endif]-->
-  <!--[if gte IE 9]><!-->
-    <script src="js/libraries/jquery-2.0.3.min.js"></script>
-  <!--<![endif]-->
-
-
+  <script src="js/libraries/jquery.1.11.0.min.js"></script>
   {% if isProduction %}
     <script src="js/plugins.min.js"></script>
     <script src="js/app.min.js"></script>
   {% else %}
-    <!--
-      All plugins, core and modules js files.
-      On prod all this will be concated and minified into plugins.min.js and app.min.js
-    -->
-
     <!-- polyfills -->
     <script src="js/libraries/polyfills.js"></script>
 
@@ -64,9 +80,6 @@
     <script src="js/app/settings.js"></script>
     <script src="js/app/promises.js"></script>
     <script src="js/app/events.js"></script>
-
-    <!-- modules -->
-    <script src="js/modules/portfolio.js"></script>
     <!-- yeoman slug -->
 
     <!-- main init -->

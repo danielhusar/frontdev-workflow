@@ -7,7 +7,7 @@ describe('APP', function() {
   describe('Globals', function() {
     it('Libraries tests.', function () {
       $.should.be.a('function');
-      $.fn.jquery.should.be.above('2.0');
+      $.fn.jquery.should.be.above('1.10');
       Modernizr.should.be.a('object');
     });
 
@@ -31,10 +31,10 @@ describe('APP', function() {
     });
     it('We should be using large version.', function () {
       //we run it through browser
-      if(window.outerWidth > 1) { 
+      if(window.outerWidth > 1) {
         APP.settings.environment.device.should.equal('large');
       //we run it through grunt
-      } else { 
+      } else {
         APP.settings.environment.device.should.equal('small');
       }
     });

@@ -2,6 +2,6 @@
 
 {% block content %}
 
-  {% include "modules/portfolio/_portfolio.tpl" %}
+  {% include "modules/carousel/_homepage.tpl" %}
 
 {% endblock %}

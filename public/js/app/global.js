@@ -154,36 +154,5 @@
     });
   };
 
-  /**
-   * Return the module wrapper
-   * @param  {String} module   Module name
-   * @return {Object}          Module DOM
-   *
-   * @sample usage:
-   * APP.moduleWrap('account');
-   */
-  Application.prototype.moduleWrap = function(module) {
-    return $('[data-module="' + module + '"]');
-  };
-
-
-
-  /**
-   * Add module to our app
-   * @param  {String} module   Module name
-   * @param  {Object} settings Settings object
-   * @param  {Object} events   Events settings
-   * @return {Object}          this
-   *
-   * @sample usage:
-   * APP.addModule('account', settings, events);
-   */
-  Application.prototype.addModule = function(module, settings, events) {
-    APP.modules[module] = $.extend({}, {
-      settins: settings
-    }, events);
-    return this;
-  };
-
 
 })(this, this.document, this.jQuery, this.Modernizr);

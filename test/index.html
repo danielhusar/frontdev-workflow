@@ -10,8 +10,8 @@
   <script src="../node_modules/sinon/lib/sinon/spy.js"></script>
   <script src="../node_modules/sinon/lib/sinon/stub.js"></script>
 
-  <script src="../public/js/libraries/modernizr-2.6.2.min.js"></script>
-  <script src="../public/js/libraries/jquery-2.0.3.min.js"></script>
+  <script src="../public/js/libraries/modernizr-2.7.0.min.js"></script>
+  <script src="../public/js/libraries/jquery-1.11.0.min.js"></script>
 
   <script>mocha.setup('tdd');</script>
 </head>
@@ -19,8 +19,21 @@
   <div id="mocha"></div>
   <div id="fixture" style="display: none"></div>
 
-  <script src="../public/js/plugins.min.js" data-cover></script>
-  <script src="../public/js/app.min.js" data-cover></script>
+  <!-- polyfills -->
+  <script src="../public/js/libraries/polyfills.js"></script>
+
+  <!-- plugins -->
+  <script src="../public/js/plugins/jQuery.lazyLoad.js"></script>
+
+  <!-- core -->
+  <script src="../public/js/app/global.js"></script>
+  <script src="../public/js/app/settings.js"></script>
+  <script src="../public/js/app/promises.js"></script>
+  <script src="../public/js/app/events.js"></script>
+  <!-- yeoman slug -->
+
+  <!-- main init -->
+  <script src="../public/js/app/init.js"></script>
 
   <script src="tests/globals.js"></script>
   <script src="tests/modules/portfolio.js"></script>

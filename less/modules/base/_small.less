@@ -1,20 +1,117 @@
+html{
+  height: 100%;
+  background: url('../img/bg.png') repeat;
+}
 body{
   min-width: 320px;
-  padding: @padding;
+  height: 100%;
+  font-family: arial;
+  background: url('../img/bg.png') repeat;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
 }
-//grid content
-.make-grid-columns-float(s);
-.make-grid(@grid-columns, s, width);
-
-.gutter-right > *{
-	margin-right: @padding;
+/*Opera Fix for footer alwasy on bottom*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;/* thank you Erik J - negate effect of float*/
 }
-.gutter-left > *{
-	margin-left: @padding;
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
 }
-.gutter-top > *{
-	margin-top: @padding;
+.center{
+  padding: 0 @padding/2;
+  text-align: left;
 }
-.gutter-bottom > *{
-	margin-bottom: @padding;
+body .left{
+  float: left;
+}
+body .right{
+  float: right;
+}
+img{
+  max-width: 100%;
+}
+a{
+  text-decoration: none;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.row{
+  display: block;
+  width: 100%;
+  *min-width: 100%;
+  &:extend(.clearfix);
+}
+.unstyled{
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  &ul{
+    list-style: none;
+    li{
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+.padding{
+  display: block;
+  margin: @padding;
+}
+.gutter-s-right > *{
+  margin-right: @padding;
+}
+.gutter-s-left > *{
+  margin-left: @padding;
+}
+.gutter-s-top > *{
+  margin-top: @padding;
+}
+.gutter-s-bottom > *{
+  margin-bottom: @padding;
+}
+.gutter-s-right-half > *{
+  margin-right: @padding/2;
+}
+.gutter-s-left-half > *{
+  margin-left: @padding/2;
+}
+.gutter-s-top-half > *{
+  margin-top: @padding/2;
+}
+.gutter-s-bottom-half > *{
+  margin-bottom: @padding/2;
+}
+.module{
+  &:extend(.clearfix all);
+  &.transparent{
+    background-color: transparent;
+  }
+  background-color: white;
+  position: relative;
+  font-size: 0.9em;
+  margin-bottom: @padding;
+  .padding{
+    &:extend(.clearfix all);
+    > :last-child{
+      margin-bottom: 0;
+      > :last-child{
+        margin-bottom: 0;
+        > :last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }

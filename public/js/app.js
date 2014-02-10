@@ -250,6 +250,7 @@
     this.promises = {};
     this.events = {};
   };
+
   var APP = window.APP = new Application();
 
   /**
@@ -396,37 +397,6 @@
     });
   };
 
-  /**
-   * Return the module wrapper
-   * @param  {String} module   Module name
-   * @return {Object}          Module DOM
-   *
-   * @sample usage:
-   * APP.moduleWrap('account');
-   */
-  Application.prototype.moduleWrap = function(module) {
-    return $('[data-module="' + module + '"]');
-  };
-
-
-
-  /**
-   * Add module to our app
-   * @param  {String} module   Module name
-   * @param  {Object} settings Settings object
-   * @param  {Object} events   Events settings
-   * @return {Object}          this
-   *
-   * @sample usage:
-   * APP.addModule('account', settings, events);
-   */
-  Application.prototype.addModule = function(module, settings, events) {
-    APP.modules[module] = $.extend({}, {
-      settins: settings
-    }, events);
-    return this;
-  };
-
 
 })(this, this.document, this.jQuery, this.Modernizr);
 
@@ -522,12 +492,6 @@
       });
     },
 
-
-    test: function(a, b, c, d) {
-      return !!1;
-    },
-
-
     /**
      * Log the versions of the used plugins
      * @return {void}
@@ -552,52 +516,6 @@
   };
 
 })(this, this.document, this.APP, this.jQuery, this.Modernizr);
-
-;(function(window, document, APP, $, undefined) {
-  'use strict';
-
-  /**
-   * Main module class
-   * @param  {object} settings Settings object that will rewite the defaults
-   */
-  var module = function(settings) {
-    //default settings
-    var defaults = {
-      $wrapper: APP.moduleWrap('portfolio')
-    };
-
-    //properties
-    this.settings = $.extend(defaults, settings);
-    this.$wrapper = this.settings.$wrapper; //shortcut to wrapper
-
-    //init functions
-    this.pluginEvents();
-    this.validate();
-
-    //log that our module is running
-    APP.log('%c portfolio module init', APP.settings.console.css);
-  };
-
-  /**
-   * All jquery bindings
-   * @return {void}
-   */
-  module.prototype.pluginEvents = function() {
-    var that = this;
-  };
-
-  /**
-   * Validation rules
-   * @return {void}
-   */
-  module.prototype.validate = function() {
-    var that = this;
-  };
-
-  //add our module
-  APP.modules.portfolio = module;
-
-})(this, this.document, this.APP, this.jQuery);
 
 ;(function(window, document, APP, $, undefined) {
   'use strict';
